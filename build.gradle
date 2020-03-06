@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'com.wojnosystems.test'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/redis.clients/jedis
+
+    implementation group: 'redis.clients', name: 'jedis', version: '3.1.0'
+    implementation group: 'org.slf4j', name: 'slf4j-nop', version: '1.7.28'
+
+
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.5.2'
+    testRuntime group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.5.2'
+}
+
+test {
+    useJUnitPlatform()
+}
